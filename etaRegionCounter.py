@@ -96,7 +96,8 @@ print "[" + str(teregion2) + "," + str(teregion3) + "]:" + str(tcut3)
 print("eta region 4")
 print "[" + str(teregion3) + "," + str(teregion4) + "]:" + str(tcut4) 
 
-
+total = tcut1+tcut2+tcut3+tcut4+bcut1+bcut2+bcut3+ecut1+ecut2+ecut3+ecut4+ecut5
+print "total number of electrons:" + str(total)
 
 ''' FOR LATER
 #definition of the file
