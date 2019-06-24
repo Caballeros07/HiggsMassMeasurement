@@ -24,21 +24,21 @@ barrelrelpT = 0.03
 endcapsrelpT = 0.07
 
 #Barrel Regions inside relative pT
-bcut1 = mytree.GetEntries("abs(eta1) > 0 && abs(eta1) < 0.8 && abs(eta2) > 0 && abs(eta2) < 0.8 && pterr1/pT1 < 0.03 && pterr2/pT2 < 0.03 && lep1_ecalDriven > 0.5 && lep2_ecalDriven > 0.5")
-bcut2 = mytree.GetEntries("abs(eta1) > 0.8 && abs(eta1) < 1 && abs(eta2) > 0.8 && abs(eta2) < 1 && pterr1/pT1 < 0.03 && pterr2/pT2 < 0.03 && lep1_ecalDriven > 0.5 && lep2_ecalDriven > 0.5")
+bcut1 = mytree.GetEntries("abs(eta1) > 0 && abs(eta1) < 0.8 && abs(eta2) > 0 && abs(eta2) < 0.8 && pterr1/pT1 < 0.03 && pterr2/pT2 < 0.03 && lep1_ecalDriven == 1 && lep2_ecalDriven == 1")
+bcut2 = mytree.GetEntries("abs(eta1) > 0.8 && abs(eta1) < 1 && abs(eta2) > 0.8 && abs(eta2) < 1 && pterr1/pT1 < 0.03 && pterr2/pT2 < 0.03 && lep1_ecalDriven == 1 && lep2_ecalDriven == 1")
 
 #Barrel Regions outside relative pT
-bcut3 = mytree.GetEntries("abs(eta1) > 0 && abs(eta1) < 1 && abs(eta2) > 0 && abs(eta2) < 1 && pterr1/pT1 > 0.03 && pterr2/pT2 > 0.03 && lep1_ecalDriven > 0.5 && lep2_ecalDriven > 0.5")
+bcut3 = mytree.GetEntries("abs(eta1) > 0 && abs(eta1) < 1 && abs(eta2) > 0 && abs(eta2) < 1 && pterr1/pT1 > 0.03 && pterr2/pT2 > 0.03 && lep1_ecalDriven == 1 && lep2_ecalDriven == 1")
 
 #Endcap Regions inside relative pT
-ecut1 = mytree.GetEntries("abs(eta1) > 1 && abs(eta1) < 1.2 && abs(eta2) > 1 && abs(eta2) < 1.2 && pterr1/pT1 < 0.07 && pterr2/pT2 < 0.07 && lep1_ecalDriven > 0.5 && lep2_ecalDriven > 0.5")
-ecut2 = mytree.GetEntries("abs(eta1) > 1.2 && abs(eta1) < 1.44 && abs(eta2) > 1.2 && abs(eta2) < 1.44 && pterr1/pT1 < 0.07 && pterr2/pT2 < 0.07 && lep1_ecalDriven > 0.5 && lep2_ecalDriven . 0.5")
-ecut3 = mytree.GetEntries("abs(eta1) > 1.44 && abs(eta1) < 1.57 && abs(eta2) > 1.44 && abs(eta2) < 1.57 && pterr1/pT1 < 0.07 && pterr2/pT2 < 0.07 && lep1_ecalDriven > 0.5 && lep2_ecalDriven > 0.5")
-ecut4 = mytree.GetEntries("abs(eta1) > 1.57 && abs(eta1) < 2 && abs(eta2) > 1.57 && abs(eta2) < 2 && pterr1/pT1 < 0.07 && pterr2/pT2 < 0.07 && lep1_ecalDriven > 0.5 && lep2_ecalDriven > 0.5")
-ecut5 = mytree.GetEntries("abs(eta1) > 2 && abs(eta1) < 2.5 && abs(eta2) > 2 && abs(eta2) < 2.5 && pterr1/pT1 < 0.07 && pterr2/pT2 < 0.07 && lep1_ecalDriven > 0.5 && lep2_ecalDriven > 0.5")
+ecut1 = mytree.GetEntries("abs(eta1) > 1 && abs(eta1) < 1.2 && abs(eta2) > 1 && abs(eta2) < 1.2 && pterr1/pT1 < 0.07 && pterr2/pT2 < 0.07 && lep1_ecalDriven == 1 && lep2_ecalDriven == 1")
+ecut2 = mytree.GetEntries("abs(eta1) > 1.2 && abs(eta1) < 1.44 && abs(eta2) > 1.2 && abs(eta2) < 1.44 && pterr1/pT1 < 0.07 && pterr2/pT2 < 0.07 && lep1_ecalDriven == 1 && lep2_ecalDriven . 0.5")
+ecut3 = mytree.GetEntries("abs(eta1) > 1.44 && abs(eta1) < 1.57 && abs(eta2) > 1.44 && abs(eta2) < 1.57 && pterr1/pT1 < 0.07 && pterr2/pT2 < 0.07 && lep1_ecalDriven == 1 && lep2_ecalDriven == 1")
+ecut4 = mytree.GetEntries("abs(eta1) > 1.57 && abs(eta1) < 2 && abs(eta2) > 1.57 && abs(eta2) < 2 && pterr1/pT1 < 0.07 && pterr2/pT2 < 0.07 && lep1_ecalDriven == 1 && lep2_ecalDriven == 1")
+ecut5 = mytree.GetEntries("abs(eta1) > 2 && abs(eta1) < 2.5 && abs(eta2) > 2 && abs(eta2) < 2.5 && pterr1/pT1 < 0.07 && pterr2/pT2 < 0.07 && lep1_ecalDriven == 1 && lep2_ecalDriven == 1")
 
 #Endcap Regions outside relative pT
-ecut6 = mytree.GetEntries("abs(eta1) > 1 && abs(eta1) < 2.5 && abs(eta2) > 1 && abs(eta2) < 2.5 && pterr1/pT1 > 0.07 && pterr2/pT2 > 0.07 && lep1_ecalDriven > 0.5 && lep2_ecalDriven > 0.5")
+ecut6 = mytree.GetEntries("abs(eta1) > 1 && abs(eta1) < 2.5 && abs(eta2) > 1 && abs(eta2) < 2.5 && pterr1/pT1 > 0.07 && pterr2/pT2 > 0.07 && lep1_ecalDriven == 1 && lep2_ecalDriven == 1")
  
 #Stuff to output by region:
 print("ECAL electrons")
@@ -64,10 +64,10 @@ print("eta region 7")
 print "[" + str(subRegion4) + "," + str(subRegion5) + "]:" + str(ecut4) + " given relative pT <" + str(endcapsrelpT) 
 
 print("eta region 8")
-print "[" + str( subRegion5) + "," + str(LargeRegion2) + "]:" + str(ecut5) + " given relative pT <" +  str(barrelrelpT)
+print "[" + str( subRegion5) + "," + str(LargeRegion2) + "]:" + str(ecut5) + " given relative pT <" +  str(endcapsrelpT)
 
 print("eta region 9")
-print "[" + str(LargeRegion1) + "," + str(LargeRegion2) + "]:" + str(ecut6) + " given relative pT >" + str(barrelrelpT) 
+print "[" + str(LargeRegion1) + "," + str(LargeRegion2) + "]:" + str(ecut6) + " given relative pT >" + str(endcapsrelpT) 
 
 #definitions for the reginos in the Tracker Electrons
 teregion0 = 0
@@ -77,10 +77,10 @@ teregion3 = 2
 teregion4 = 2.5
 
 #cuts for the Tracker Electrons
-tcut1 = mytree.GetEntries("abs(eta1) > 0 && abs(eta1) < 1.44 && abs(eta2) > 0 && abs(eta2) < 1.44 && lep1_ecalDriven < 0.5 && lep2_ecalDriven < 0.5")
-tcut2 = mytree.GetEntries("abs(eta1) > 1.44 && abs(eta1) < 1.6 && abs(eta2) > 1.44 && abs(eta2) < 1.6 && lep1_ecalDriven < 0.5 && lep2_ecalDriven < 0.5")
-tcut3 = mytree.GetEntries("abs(eta1) > 1.6 && abs(eta1) < 2 && abs(eta2) > 1.6 && abs(eta2) < 2 && lep1_ecalDriven < 0.5 && lep2_ecalDriven < 0.5")
-tcut4 = mytree.GetEntries("abs(eta1) > 2 && abs(eta1) < 2.5 && abs(eta2) > 2 && abs(eta2) < 2.5 && lep1_ecalDriven < 0.5 && lep2_ecalDriven < 0.5")
+tcut1 = mytree.GetEntries("abs(eta1) > 0 && abs(eta1) < 1.44 && abs(eta2) > 0 && abs(eta2) < 1.44 && lep1_ecalDriven == 0 && lep2_ecalDriven == 0")
+tcut2 = mytree.GetEntries("abs(eta1) > 1.44 && abs(eta1) < 1.6 && abs(eta2) > 1.44 && abs(eta2) < 1.6 && lep1_ecalDriven == 0 && lep2_ecalDriven == 0")
+tcut3 = mytree.GetEntries("abs(eta1) > 1.6 && abs(eta1) < 2 && abs(eta2) > 1.6 && abs(eta2) < 2 && lep1_ecalDriven == 0 && lep2_ecalDriven == 0")
+tcut4 = mytree.GetEntries("abs(eta1) > 2 && abs(eta1) < 2.5 && abs(eta2) > 2 && abs(eta2) < 2.5 && lep1_ecalDriven == 0 && lep2_ecalDriven == 0")
 
 #statements to print the Tracker Electrons
 print("Tracker electrons")
@@ -97,16 +97,5 @@ print("eta region 4")
 print "[" + str(teregion3) + "," + str(teregion4) + "]:" + str(tcut4) 
 
 total = tcut1+tcut2+tcut3+tcut4+bcut1+bcut2+bcut3+ecut1+ecut2+ecut3+ecut4+ecut5
-print "total number of electrons:" + str(total)
-
-''' FOR LATER
-#definition of the file
-path = "/raid/raid8/ferrico/HZZ4l/CMSSW_10_2_5/src/leptonPtErrorCorrector/makeSlimTree/output/DY_2018/DYJetsToLL_M-50_kalman_v4_m2e_v2.root"
-
-#leave values being pulled from the NTuple
-eta1 = root2array(path,"passedEvents","eta1")
-eta2 = root2array(path,"passedEvents","eta2")
-eta1 = root2array(path,"passedEvents","eta1")
-eta1 = root2array(path,"passedEvents","eta1")
-'''
+print "total number of events:" + str(total)
 
