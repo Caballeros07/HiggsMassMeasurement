@@ -30,7 +30,7 @@ phi2 = root2array(path,"passedEvents","phi2")
 f = TFile.Open("/raid/raid8/ferrico/HZZ4l/CMSSW_10_2_5/src/leptonPtErrorCorrector/makeSlimTree/output/DY_2018/DYJetsToLL_M-50_kalman_v4_m2e_v2.root")
 t = f.Get("passedEvents")
 n = t.GetEntries()
-print(n)
+print('Number of Events', n)
 
 #global lists being defined to be filled on a per event basis
 mZHist = []
@@ -91,16 +91,6 @@ bx.set_ylabel("Counts")
 bx.set_xlabel("mass 2l (GeV)")
 fig1.savefig('../../public_html/MC_deltamZ_varying_pT_histo.png')
 
-
-#scatterplot doing the closure test
-x = range(1,1001) 
-
-fig, ax = plt.subplots()
-ax.set_title('Branch mass compared to calulated Mass')
-ax.set_ylabel("massZ_NTuple / massZ_calculated")
-ax.set_xlabel('Event Number')
-ax.scatter(x,closure)
-fig.savefig('../../public_html/MC_MassZ_closure_test.png')
 
 
 #histograms of the mass of the Z boson, both calculated and branch
