@@ -1,5 +1,6 @@
 #Standard imports
 from root_numpy import root2array
+from ROOT import TFile
 import matplotlib.pyplot as plt
 import numpy as np
 
