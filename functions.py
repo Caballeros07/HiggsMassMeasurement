@@ -3,32 +3,12 @@
 
 import math as m
 
-#definition for the dot product between two vectors in 3-space:
-def DotProduct(pT1,pT2,phi1,phi2,eta1,eta2):
-    return pT1*pT2*(m.cos(phi1-phi2)+m.sinh(eta1)*m.sinh(eta2))
-    
-#definition for the magnitude of a vector:
-def Mag(pT,phi,eta):
-    return m.sqrt((pT*m.cos(phi))**2+(pT*m.sin(phi))**2+(pT*m.sinh(eta))**2)
-
-#defintion for the invariant of two 4-vectors:
-def Inv(a,b):
-    return m.sqrt(2*(a-b))
-
-#definition for adding in quadrature:
-def Quad(a,b):
-	return m.sqrt(a**2+b**2)
-
-
-
 #definition to the entire calculation for the invariant mass
 def InvariantMass(pt1,pt2,phi1,phi2,eta1,eta2):
-	p1 = Mag(pt1,phi1,eta1)
-	p2 = Mag(pt2,phi2,eta2)
-	p1p2 = DotProduct(pt1,pt2,phi2,phi2,eta1,eta2)
-	mass = Inv(p1*p2, p1p2)
-	return mass
-
+    mass = m.sqrt(2*pt1*pt2*(-m.cos(phi2-phi1)+m.cosh(eta2-eta1)))
+    return mass
+def Quad(a,b):
+    return m.sqrt(a**2+b**2)
 
 
 
