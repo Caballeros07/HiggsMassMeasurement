@@ -29,7 +29,6 @@ phi2 = root2array(path,"passedEvents","phi2")
 f = TFile.Open("/raid/raid8/ferrico/HZZ4l/CMSSW_10_2_5/src/leptonPtErrorCorrector/makeSlimTree/output/DY_2018/DYJetsToLL_M-50_kalman_v4_m2e_v2.root")
 t = f.Get("passedEvents")
 n = t.GetEntries()
-print(n)
 
 #global lists being defined to be filled on a per event basis
 mZHist = []
