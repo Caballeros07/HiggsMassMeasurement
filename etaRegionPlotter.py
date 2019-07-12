@@ -31,7 +31,8 @@ for i in range(n):
 
 #histogram of leptons in the geometry of CMS
 fig, ax = plt.subplots()
-h = ax.hist2d(x,y,bins=(120,80),range=([-2,2],[0,0.1]),cmap='Blues')
+
+h = ax.hist2d(x,y,bins=(120,80),range=([-2,2],[0,0.1]),cmap='Blues',normed=True)
 plt.colorbar(h[3], ax=ax)
 plt.title('Distribution of leptons in CMS')
 plt.xlabel('eta regions')
