@@ -32,9 +32,42 @@ for i in range(n):
 #histogram of leptons in the geometry of CMS
 fig, ax = plt.subplots()
 
-h = ax.hist2d(x,y,bins=(120,80),range=([-2,2],[0,0.1]),cmap='Blues',normed=True)
+h = ax.hist2d(x,y,bins=(120,80),range=([-2.5,2.5],[0,0.1]),cmap='Blues')
 plt.colorbar(h[3], ax=ax)
 plt.title('Distribution of leptons in CMS')
 plt.xlabel('eta regions')
 plt.ylabel('relative pT')
-fig.savefig('../../public_html/MC_2DHisto_nocuts.png')
+
+ax.annotate("R1b", xy=(-0.9, 0.02), xytext=(-0.8, 0.032),arrowprops=dict(arrowstyle="->"))
+
+ax.annotate("R3a", xy=(1.1, 0.032), xytext=(0, 0.032),arrowprops=dict(arrowstyle="->"))
+ax.annotate("R3b", xy=(1.3, 0.038), xytext=(0, 0.038),arrowprops=dict(arrowstyle="->"))
+ax.annotate("R3c", xy=(1.5, 0.044), xytext=(0, 0.044),arrowprops=dict(arrowstyle="->"))
+ax.annotate("R3d", xy=(1.75, 0.05), xytext=(0, 0.05),arrowprops=dict(arrowstyle="->"))
+ax.annotate("R3e", xy=(2.25, 0.056), xytext=(0, 0.056),arrowprops=dict(arrowstyle="->"))
+
+ax.text(x=-0.5,y=0.02,s='R1a')
+
+ax.text(x=-1.75,y=0.09,s='R4')
+ax.text(x=1.75,y=0.09,s='R4')
+ax.text(x=-0.2,y=0.09,s='R2')
+
+ax.axvline(x=0,ymin=0,ymax=0.3,color='m',lw=0.8)
+ax.axvline(x=0.8,ymin=0,ymax=0.3,color='m',lw=0.8)
+ax.axvline(x=-0.8,ymin=0,ymax=0.3,color='m',lw=0.8)
+ax.axvline(x=1,ymin=0,ymax=1,color='r',lw=1.4)
+ax.axvline(x=-1,ymin=0,ymax=1,color='r',lw=1.4)
+ax.axvline(x=1.2,ymin=0,ymax=0.7,color='m',lw=0.8)
+ax.axvline(x=1.4,ymin=0,ymax=0.7,color='m',lw=0.8)
+ax.axvline(x=1.6,ymin=0,ymax=0.7,color='m',lw=0.8)
+ax.axvline(x=2,ymin=0,ymax=0.7,color='m',lw=0.8)
+ax.axvline(x=-1.2,ymin=0,ymax=0.7,color='m',lw=0.8)
+ax.axvline(x=-1.4,ymin=0,ymax=0.7,color='m',lw=0.8)
+ax.axvline(x=-1.6,ymin=0,ymax=0.7,color='m',lw=0.8)
+ax.axvline(x=-2,ymin=0,ymax=0.7,color='m',lw=0.8)
+
+ax.axhline(y=0.03,xmin=0.3,xmax=0.7,color='r',lw=1.4)
+ax.axhline(y=0.07,xmin=0,xmax=0.3,color='r',lw=1.4)
+ax.axhline(y=0.07,xmin=0.7,xmax=1,color='r',lw=1.4)
+
+plt.savefig('../../public_html/MC_2DHisto_nocuts_updated.png')
